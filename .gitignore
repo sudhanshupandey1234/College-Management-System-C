@@ -1,0 +1,8 @@
+# Ignore executable files
+*.exe
+
+# Ignore data files
+*.dat
+
+# Ignore VS Code settings
+.vscode/
