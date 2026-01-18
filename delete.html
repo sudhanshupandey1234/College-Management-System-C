@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Delete Student</title>
+  <style>
+    body{font-family:Arial;background:#f2f2f2;}
+    .box{width:400px;margin:50px auto;background:#fff;padding:20px;box-shadow:0 0 10px #aaa;}
+    input,button{width:100%;padding:10px;margin:8px 0;}
+    button{background:red;color:white;border:none;cursor:pointer;}
+    a{display:block;text-align:center;margin-top:10px;}
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h2>Delete Student by UID</h2>
+
+  <form action="/cgi-bin/deletestudent.exe" method="get">
+    <input type="text" name="uid" placeholder="Enter UID to Delete" required>
+    <button type="submit">Delete</button>
+  </form>
+
+  <a href="/college/">Back</a>
+</div>
+
+</body>
+</html>

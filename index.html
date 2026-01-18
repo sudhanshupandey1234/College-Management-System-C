@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>College Management System</title>
+  <style>
+    body{
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container{
+      width: 480px;
+      margin: 60px auto;
+      background: white;
+      padding: 25px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    h1{
+      margin: 5px 0;
+      font-size: 22px;
+      color: #222;
+    }
+
+    p{
+      color: #666;
+      margin-top: 0;
+      font-size: 14px;
+    }
+
+    .btn{
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      color: white;
+      transition: 0.2s;
+    }
+
+    .btn:hover{
+      transform: scale(1.02);
+    }
+
+    .add{ background: #28a745; }
+    .view{ background: #343a40; }
+    .search{ background: #007bff; }
+    .delete{ background: #dc3545; }
+    .update{ background: #fd7e14; }
+
+    .footer{
+      margin-top: 20px;
+      font-size: 12px;
+      color: #888;
+    }
+
+    .formbox{
+      margin-top: 20px;
+      text-align: left;
+      background: #fafafa;
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+    }
+
+    input{
+      width: 100%;
+      padding: 10px;
+      margin: 7px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      outline: none;
+    }
+
+    button{
+      width: 100%;
+      padding: 12px;
+      background: #28a745;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover{
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>College Management System</h1>
+  <p>UID based Student Records (C + CGI + File Handling)</p>
+
+  <!-- Buttons -->
+  <a class="btn view" href="/college/view.html"> View Students</a>
+  <a class="btn search" href="/college/search.html"> Search Student</a>
+  <a class="btn delete" href="/college/delete.html"> Delete Student</a>
+  <a class="btn update" href="/college/update.html"> Update Student</a>
+  <a class="btn view" href="/college/count.html"> Count Students</a>
+
+
+  <!-- Add Student Form -->
+  <div class="formbox">
+    <h3 style="margin:0 0 10px 0;"> Add Student</h3>
+
+    <form action="/cgi-bin/addstudent.exe" method="get">
+      <input type="text" name="uid" placeholder="UID (e.g. 25lbcs1472)" required>
+      <input type="text" name="fname" placeholder="First Name" required>
+      <input type="text" name="lname" placeholder="Last Name" required>
+      <input type="text" name="cgpa" placeholder="CGPA (e.g. 8.8)" required>
+      <input type="text" name="course" placeholder="Course (e.g. CSE)" required>
+
+      <button type="submit"> Add Student</button>
+    </form>
+  </div>
+
+  <div class="footer">
+    Developed by Sudhanshu Pandey 
+  </div>
+</div>
+
+</body>
+</html>
