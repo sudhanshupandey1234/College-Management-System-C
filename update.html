@@ -3,7 +3,17 @@
 <head>
   <title>Update Student</title>
   <style>
-    body{font-family:Arial;background:#f2f2f2;}
+    body{
+      font-family:Arial;
+      background: linear-gradient(45deg, #f2f2f2, #e0e0e0, #f2f2f2);
+      background-size: 400% 400%;
+      animation: backgroundShift 10s ease infinite;
+    }
+    @keyframes backgroundShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
     .box{width:420px;margin:50px auto;background:#fff;padding:20px;box-shadow:0 0 10px #aaa;}
     input,button{width:100%;padding:10px;margin:8px 0;}
     button{background:orange;color:black;border:none;cursor:pointer;font-weight:bold;}
